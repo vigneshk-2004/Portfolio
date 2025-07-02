@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4a3cff">
+
+  <title>Vignesh K | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="section fade-in">
+      <div class="container hero-content">
+        <div class="image-container">
+            <img src="myprofile1.png"class="profile-img"/>
+        </div>
+        <h1>Hi, I'm Vignesh K</h1>
+        <p>A passionate and driven Bachelor of Computer Applications(BCA) graduated student at Dr.NSAM First Grade College,Bangalore-89</p>
+        <button id="downloadResume" class="resume-btn" aria-label="Download Resume">Download CV</button>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="section fade-in">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+            I'm a BCA graduate with a deep curiosity for technology and how it shapes the digital world. My journey in tech has led me to explore a wide range of areas from building dynamic interfaces on the frontend to developing robust systems on the backend. I’m also diving into the world of Machine Learning, discovering how intelligent systems can solve real-world problems and enhance user experiences.
+I enjoy learning by doing taking on projects that challenge me to connect different layers of development and think beyond just code. Whether it’s crafting clean, efficient logic or exploring new tools and frameworks, I’m always eager to grow and stay updated with evolving tech trends.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills-section">
+      <h2>Skills</h2>
+    
+      <div class="accordion">
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">
+            <span class="label">Programming Languages</span>
+            <span class="arrow">&#709;</span> <!-- ˅ -->
+          </button>
+          <div class="accordion-content">
+            <p>Python</p>
+            <p>Java</p>
+            <p>Node.js</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">
+            <span class="label">Frontend Technologies</span>
+            <span class="arrow">&#709;</span>
+          </button>
+          <div class="accordion-content">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">
+            <span class="label">Frameworks & Technologies</span>
+            <span class="arrow">&#709;</span>
+          </button>
+          <div class="accordion-content">
+            <p>NumPy</p>
+            <p>Pandas</p>
+            <p>Matplotlib</p>
+            <p>Seaborn</p>
+            <p>Django</p>
+            <p>Flask</p>
+            <p>Spring Boot</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">
+            <span class="label">Databases</span>
+            <span class="arrow">&#709;</span>
+          </button>
+          <div class="accordion-content">
+            <p>MySQL</p>
+            <p>PostgreSQL</p>
+            <p>MongoDB</p>
+            <p>SQLite</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">
+            <span class="label">Operating System & Cloud</span>
+            <span class="arrow">&#709;</span>
+          </button>
+          <div class="accordion-content">
+            <p>Linux</p>
+            <p>AWS Services</p>
+          </div>
+        </div>
+    
+        <div class="accordion-item">
+          <button class="accordion-toggle">
+            <span class="label">AI Tools</span>
+            <span class="arrow">&#709;</span>
+          </button>
+          <div class="accordion-content">
+            <p>ChatGPT</p>
+            <p>Google Gemini AI</p>
+            <p>Claude AI</p>
+            <p>Perplexity AI</p>
+          </div>
+        </div>
+    
+      </div>
+    </section>       
+    <!---Qualification-->
+    <section id="qualification" class="modern-timeline">
+      <h2>Qualification</h2>
+    
+      <div class="timeline-entry">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>BCA</h3>
+          <p>Dr. NSAM First Grade College</p>
+          <p>9.5 CGPA</p>
+          <span>2022 – 2024</span>
+        </div>
+      </div>
+    
+      <div class="timeline-entry">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>PUC (11th & 12th)</h3>
+          <p>Seshadripuram PU College</p>
+          <p>87%</p>
+          <span>2020 – 2022</span>
+        </div>
+      </div>
+    
+      <div class="timeline-entry">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>SSLC (10th)</h3>
+          <p>Government Boys High School</p>
+          <p>64.48%</p>
+          <span>2018 – 2020</span>
+        </div>
+      </div>
+    </section>
+    
+
+    
+    <!-- Projects -->
+    <section id="projects" class="section fade-in">
+      <div class="container">
+        <h2 style="text-align: center;">Projects</h2>
+    
+        <div class="carousel-wrapper">
+          <button class="carousel-btn left">&#10094;</button>
+    
+          <div class="projects-carousel">
+            <div class="project-card active">
+              <h3>Movie Recommendation System</h3>
+              <p>Developed a movie recommendation system using content-based filtering by leveraging movie metadata such as genres, cast, and overview. Applied TF-IDF vectorization and cosine similarity to identify and suggest similar movies. The system generates personalized recommendations based on user-selected input. It was deployed using Streamlit to offer an interactive web experience.</p>
+            </div>
+            <div class="project-card">
+              <h3>Spam Detection System</h3>
+              <p>Built a spam classifier using NLP techniques with Bag of Words and TF-IDF for text feature extraction. Trained machine learning models including Naive Bayes, SVM, and Logistic Regression, and evaluated their performance using accuracy, precision, and recall. The model was deployed as a Streamlit web app for real-time spam detection based on user input.</p>
+            </div>
+            <div class="project-card">
+              <h3>Language Translation Tool</h3>
+              <p>Developed a real-time language translation tool supporting multiple languages to enhance cross-language communication. Integrated advanced NLP techniques and high-performance translation APIs to ensure accurate and context-aware results. The tool delivers instant translations through a responsive and intuitive user interface. Focused on creating a seamless and scalable multilingual experience for users.</p>
+            </div>
+            <div class="project-card">
+              <h3>Attendance Management System</h3>
+              <p>Developed and deployed a full-stack, secure, cloud-native application with load balancing and auto-scaling features. Designed to improve attendance tracking efficiency and reporting with an intuitive user interface. Integrated with backend APIs, real-time authentication, and dynamic dashboards for administrative control.</p>
+            </div>
+          </div>
+    
+          <button class="carousel-btn right">&#10095;</button>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Experience -->
+    <section id="experience" class="section fade-in">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="experience-card">
+          <h3>Cloud Engineer Intern</h3>
+          <p class="company-duration">CogniMinds | Feb 2025 - April 2025</p>
+          <p>I deployed a scalable Attendance Management System used by over 3 employees, ensuring 88.8% uptime by utilizing AWS EC2 and S3 for backend infrastructure. The system was designed for reliability and efficiency, supporting seamless attendance tracking. To maintain performance, I actively monitored server metrics using AWS CloudWatch. This proactive monitoring helped reduce downtime incidents by 20%, improving system availability. Overall, the deployment provided a stable and cloud-optimized solution for daily operations.</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="experience-card">
+          <h3>Data Science with Python Intern</h3>
+          <p class="company-duration">Smarted Innovations| April 2023 - June 2023</p>
+          <ul>
+            <p>I gained hands-on experience in Python by developing over two AI-based projects, which improved my coding speed by 40%. One of the key projects was a content-based Movie Recommendation System built using the TMDB dataset, where I applied cosine similarity on genres, cast, and keywords to generate accurate recommendations. I also implemented text preprocessing and NLP techniques to clean, vectorize, and merge metadata efficiently. In addition, I built a real-time language translation tool that supports multiple languages, enabling smooth cross-language communication and enhancing user experience.</p>
+          </ul>
+          
+      </div>
+    </section>
+   
+
+    <!-- Achievements -->
+    <section id="achievements" class="section fade-in">
+      <div class="container">
+        <h2>Achievements</h2>
+        <p>Winner - 3rd Place in Coding & Debugging Competition</p>
+       <p>Winner - 3rd place in IT Quiz at Atria Institute of Technology</p>
+        <p>Centum Award for 4 subjects</p>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="section fade-in">
+      <div class="container">
+        <h2>Leadership</h2>
+        <ul>
+          <p>Event Volunteer & Department Coordinator</p>
+          <p>Class Representative - 2nd Semester</p>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+     <h2>Contact Me</h2>
+    <div class="header-contact">
+    
+      <div class="contact-details">
+        <div class="contact-item">
+          <img src="email.png" alt="Email" class="icon">
+          <span class="label">Email:</span>
+          <span class="value">vigneshkhatokar@gmail.com</span>
+        </div>
+        <div class="contact-item">
+          <img src="phone.png" alt="Phone" class="icon">
+          <span class="label">Phone:</span>
+          <span class="value">+91 8217265100</span>
+        </div>
+        <div class="contact-item">
+          <img src="linkedin.png" alt="LinkedIn" class="icon">
+          <span class="label">LinkedIn:</span>
+          <span class="value"><a href="https://linkedin.com/in/vignesh-k-15b49034a" target="_blank">Vignesh K</a></span>
+        </div>
+        <div class="contact-item">
+          <img src="location.png" alt="Location" class="icon">
+          <span class="label">Location:</span>
+          <span class="value">Bengaluru, India</span>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>Vignesh K</h3>
+      <p>Bachelor of Computer Application Student</p>
+      <ul class="footer-links">
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#qualification">Qualification</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+      <p class="copyright">Vignesh K. All rights reserved</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
