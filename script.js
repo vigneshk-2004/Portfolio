@@ -58,12 +58,45 @@ document.querySelectorAll(".accordion-toggle").forEach(button => {
     });
   });
 
+    const cards = document.querySelectorAll('.project-card');
+  const dots = document.querySelectorAll('.dot');
+  const leftBtn = document.querySelector('.carousel-btn.left');
+  const rightBtn = document.querySelector('.carousel-btn.right');
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    // Hide all cards and remove active dot
+    cards.forEach(card => card.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    // Show the selected card and set corresponding dot active
+    cards[index].classList.add('active');
+    dots[index].classList.add('active');
+
+    currentIndex = index;
+  }
+
+  leftBtn.addEventListener('click', () => {
+    const newIndex = (currentIndex - 1 + cards.length) % cards.length;
+    showSlide(newIndex);
+  });
+
+  rightBtn.addEventListener('click', () => {
+    const newIndex = (currentIndex + 1) % cards.length;
+    showSlide(newIndex);
+  });
+
+  // Optional: clicking on a dot navigates to that slide
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => showSlide(index));
+  });
 
 // Download Resume
 document.getElementById('downloadResume').addEventListener('click', function() {
   const link = document.createElement('a');
-  link.href = 'BackendDeveloper.pdf';
-  link.download = 'BackendDeveloper.pdf';
+  link.href = 'VigneshResume.pdf';
+  link.download = 'VigneshResume.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

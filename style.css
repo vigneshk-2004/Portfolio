@@ -241,6 +241,25 @@
     font-size: 0.85rem;
     color: #999;
   }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #007bff; /* Blue like your image */
+}
 
   .carousel-wrapper {
     position: relative;
