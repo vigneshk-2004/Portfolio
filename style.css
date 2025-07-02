@@ -133,7 +133,8 @@
     font-weight: bold;
     cursor: pointer;
     display: flex;
-    justify-content: space-between; /* arrow on right */
+    justify-content: flex-start;
+    gap: 30px; /* or more if needed */
     align-items: center;
     transition: background 0.2s;
   }
@@ -143,10 +144,12 @@
   }
   
   .accordion-toggle .arrow {
-    font-size: 1.2rem;
+    font-size: 5rem;           /* increase arrow size */
+    min-width: 80px;           /* add width to the arrow */
+    text-align: right;         /* ensure alignment */
     color: #4a3cff;
     transition: transform 0.3s ease;
-  }
+  }  
   
   .accordion-content {
     display: none;
@@ -300,16 +303,15 @@
     transform: translateY(-50%);
     color: rgb(22, 22, 224);
     border: none;
-    font-size: 28px;     
-    padding: 12px;        
+    font-size: 28px;
+    padding: 12px;
     cursor: pointer;
     z-index: 10;
     background: transparent;
   }
   
-  
   .carousel-btn.left {
-    left: -50px; /* Adjust for your layout */
+    left: -50px; /* Desktop default */
   }
   
   .carousel-btn.right {
@@ -319,6 +321,36 @@
   .carousel-btn:hover {
     background-color: #3e0bf7;
     background: transparent;
+  }
+  
+  /* ✅ Mobile responsiveness fix */
+  @media (max-width: 768px) {
+    .carousel-btn.left {
+      left: 10px;
+    }
+  
+    .carousel-btn.right {
+      right: 10px;
+    }
+  
+    .carousel-btn {
+      font-size: 24px;
+      padding: 8px;
+      background-color: rgba(255, 255, 255, 0.6); /* Optional */
+      border-radius: 50%;
+    }
+  
+    .projects-carousel {
+      padding: 0 40px; /* Add space to prevent content overlap */
+    }
+  }
+  
+  /* ✅ Extra small screens (optional tweak) */
+  @media (max-width: 480px) {
+    .carousel-btn {
+      font-size: 20px;
+      padding: 6px;
+    }
   }
   
   
@@ -414,6 +446,7 @@
     font-weight: 600;
     color: black;
     min-width: 80px;
+    padding-left: 20px;
   }
   
   .value a {
