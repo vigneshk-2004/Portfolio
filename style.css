@@ -133,8 +133,7 @@
     font-weight: bold;
     cursor: pointer;
     display: flex;
-    justify-content: flex-start;
-    gap: 30px; /* or more if needed */
+    justify-content: space-between;/* or more if needed */
     align-items: center;
     transition: background 0.2s;
   }
@@ -144,12 +143,11 @@
   }
   
   .accordion-toggle .arrow {
-    font-size: 5rem;           /* increase arrow size */
-    min-width: 80px;           /* add width to the arrow */
-    text-align: right;         /* ensure alignment */
+    font-size: 1.2rem;
     color: #4a3cff;
     transition: transform 0.3s ease;
-  }  
+  }
+   
   
   .accordion-content {
     display: none;
