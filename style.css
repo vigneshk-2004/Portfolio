@@ -145,7 +145,7 @@
 
 .accordion-toggle .arrow {
   font-size: 1.2rem;
-  color: #4a3cff;
+  color: rgb(22, 22, 224);
   transition: transform 0.3s ease;
 }
 
@@ -201,20 +201,20 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #4a3cff;
+    background-color: rgb(22, 22, 224);
   }
   
   .timeline-marker {
     width: 14px;
     height: 14px;
-    background-color: #4a3cff;
+    background-color:rgb(22, 22, 224);
     border: 3px solid #fff;
     border-radius: 50%;
     position: absolute;
     left: 12px;
     top: 6px;
     z-index: 1;
-    box-shadow: 0 0 0 2px #4a3cff;
+    box-shadow: 0 0 0 2px rgb(22, 22, 224);
   }
   
   .timeline-content {
@@ -258,7 +258,7 @@
 }
 
 .dot.active {
-  background-color: #007bff; /* Blue like your image */
+  background-color: rgb(22, 22, 224); /* Blue like your image */
 }
 
   .carousel-wrapper {
@@ -474,7 +474,71 @@
   .value a:hover {
     text-decoration: underline;
   }
-  
+  /* Contact Form Container */
+#messageForm {
+  padding: 2rem;
+  font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 1rem;
+  margin: auto;
+}
+
+/* Input and Textarea Styling */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  background-color: #f2f3fe;
+  border-radius: 12px;
+  font-size: 16px;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  resize: none;
+}
+
+/* Button Styling */
+.contact-form button {
+  padding: 12px;
+  background-color: rgb(22, 22, 224);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.contact-form button:hover {
+  background-color: rgb(16, 16, 180);
+}
+
+/* Thank You Text */
+.thank-you {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 16px;
+  color: #fefefe;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .contact-form {
+    width: 90%;
+  }
+
+  .thank-you {
+    font-size: 14px;
+  }
+}
+
   
   footer {
     background: var(--card);
@@ -523,6 +587,7 @@
       gap: 12px;
     }
   }
+
   .footer {
     background-color: #4a3cff; /* You can adjust this blue shade */
     color: #fff;
