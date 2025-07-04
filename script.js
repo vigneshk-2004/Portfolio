@@ -32,66 +32,75 @@ document.querySelectorAll(".accordion-toggle").forEach(button => {
   });
 });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".project-card");
-    const leftBtn = document.querySelector(".carousel-btn.left");
-    const rightBtn = document.querySelector(".carousel-btn.right");
 
-    let currentIndex = 0;
+  const indices = {
+    java: 0,
+    aws: 0,
+    ml: 0
+  };
 
-    function updateCarousel(index) {
-      cards.forEach((card, i) => {
-        card.classList.toggle("active", i === index);
-      });
-    }
+  function updateCarousel(category) {
+    const cards = document.querySelectorAll(`#${category}-carousel .project-card`);
+    cards.forEach((card, i) => {
+      card.classList.toggle("active", i === indices[category]);
+    });
+  }
+  function updateCarousel(category) {
+  const cards = document.querySelectorAll(`#${category}-carousel .project-card`);
+  const dotContainer = document.getElementById(`${category}-dots`);
+  dotContainer.innerHTML = ''; // Clear old dots
 
-    updateCarousel(currentIndex);
+  cards.forEach((card, i) => {
+    card.classList.toggle("active", i === indices[category]);
 
-    leftBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-      updateCarousel(currentIndex);
+    const dot = document.createElement("span");
+    dot.classList.add("dot");
+    if (i === indices[category]) dot.classList.add("active");
+
+    dot.addEventListener("click", () => {
+      indices[category] = i;
+      updateCarousel(category);
     });
 
-    rightBtn.addEventListener("click", () => {
-      currentIndex = (currentIndex + 1) % cards.length;
-      updateCarousel(currentIndex);
-    });
+    dotContainer.appendChild(dot);
   });
+}
 
-    const cards = document.querySelectorAll('.project-card');
-  const dots = document.querySelectorAll('.dot');
-  const leftBtn = document.querySelector('.carousel-btn.left');
-  const rightBtn = document.querySelector('.carousel-btn.right');
 
-  let currentIndex = 0;
-
-  function showSlide(index) {
-    // Hide all cards and remove active dot
-    cards.forEach(card => card.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-
-    // Show the selected card and set corresponding dot active
-    cards[index].classList.add('active');
-    dots[index].classList.add('active');
-
-    currentIndex = index;
+  function prevSlide(category) {
+    const cards = document.querySelectorAll(`#${category}-carousel .project-card`);
+    indices[category] = (indices[category] - 1 + cards.length) % cards.length;
+    updateCarousel(category);
   }
 
-  leftBtn.addEventListener('click', () => {
-    const newIndex = (currentIndex - 1 + cards.length) % cards.length;
-    showSlide(newIndex);
+  function nextSlide(category) {
+    const cards = document.querySelectorAll(`#${category}-carousel .project-card`);
+    indices[category] = (indices[category] + 1) % cards.length;
+    updateCarousel(category);
+  }
+
+  function showCategory(category) {
+    const categories = ['java', 'aws', 'ml'];
+    categories.forEach(cat => {
+      const section = document.getElementById(`${cat}-category`);
+      const tab = document.querySelector(`.tab-btn[onclick="showCategory('${cat}')"]`);
+      if (cat === category) {
+        section.style.display = 'block';
+        tab.classList.add('active');
+        updateCarousel(cat); // Ensure the first card shows
+      } else {
+        section.style.display = 'none';
+        tab.classList.remove('active');
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    showCategory('java'); // Set default view
   });
 
-  rightBtn.addEventListener('click', () => {
-    const newIndex = (currentIndex + 1) % cards.length;
-    showSlide(newIndex);
-  });
 
-  // Optional: clicking on a dot navigates to that slide
-  dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => showSlide(index));
-  });
-
+  
 // Download Resume
 document.getElementById('downloadResume').addEventListener('click', function() {
   const link = document.createElement('a');

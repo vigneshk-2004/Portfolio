@@ -241,136 +241,118 @@
     font-size: 0.85rem;
     color: #999;
   }
-.carousel-dots {
+/* ==== Tabs ==== */
+.project-tabs {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.tab-btn {
+  padding: 8px 18px;
+  margin: 0 8px;
+  border: none;
+  background-color: #e6f0ff;
+  color: #1e4db7;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background-color: #1e4db7;
+  color: white;
+}
+
+/* ==== Category Title ==== */
+.category-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1e4db7;
+  margin-bottom: 15px;
+}
+
+/* ==== Carousel Wrapper ==== */
+.carousel-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
+}
+
+/* ==== Carousel Buttons ==== */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  color: #1e4db7;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-btn.left {
+  left: -40px;
+}
+
+.carousel-btn.right {
+  right: -40px;
+}
+
+/* ==== Project Cards ==== */
+.projects-carousel {
+  display: flex;
+  overflow: hidden;
+  min-height: 200px;
+  width: 100%;
+}
+
+.project-card {
+  display: none;
+  width: 100%;
+  padding: 25px;
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.project-card.active {
+  display: block;
+}
+.dots {
+  text-align: center;
+  margin-top: 15px;
 }
 
 .dot {
-  height: 12px;
-  width: 12px;
-  background-color: #ccc;
-  border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.3s ease;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  border-radius: 50%;
+  background-color: #ccc;
+  transition: background-color 0.3s;
 }
 
 .dot.active {
-  background-color: rgb(22, 22, 224); /* Blue like your image */
+  background-color: rgb(22, 22, 224); /* blue color like your image */
 }
 
-  .carousel-wrapper {
-    position: relative;
-    max-width: 600px;
-    margin: 30px auto;
-  }
-  
-  .projects-carousel {
-    width: 100%;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    min-height: 300px; /* Optional: reserves space to avoid button bounce */
-  }
-  
-  .project-card {
-    display: none;
-    flex-shrink: 0;
-    width: 100%;
-    background: #f9f9f9;
-    padding: 24px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: auto;
-    max-height: none;
-    word-wrap: break-word;
-    white-space: normal;
-    overflow: visible;
-    outline: none;
-  }
-  
-  .project-card.active {
-    display: block;
-  }
-  
-  /* Hover + Focus effect */
-  .project-card:hover,
-  .project-card:focus-within {
-    transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 8px 24px rgba(0, 119, 182, 0.15);
-  }
-  
-  .project-card h3 {
-    color: #101011;
-    margin-bottom: 10px;
-  }
-  
-  .project-card p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-  }
-  
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgb(22, 22, 224);
-    border: none;
-    font-size: 28px;
-    padding: 12px;
-    cursor: pointer;
-    z-index: 10;
-    background: transparent;
-  }
-  
-  .carousel-btn.left {
-    left: -50px; /* Desktop default */
-  }
-  
-  .carousel-btn.right {
-    right: -50px;
-  }
-  
-  .carousel-btn:hover {
-    background-color: #3e0bf7;
-    background: transparent;
-  }
-  
-  /* ✅ Mobile responsiveness fix */
-  @media (max-width: 768px) {
-    .carousel-btn.left {
-      left: 10px;
-    }
-  
-    .carousel-btn.right {
-      right: 10px;
-    }
-  
-    .carousel-btn {
-      font-size: 24px;
-      padding: 8px;
-      background-color: rgba(255, 255, 255, 0.6); /* Optional */
-      border-radius: 50%;
-    }
-  
-    .projects-carousel {
-      padding: 0 40px; /* Add space to prevent content overlap */
-    }
-  }
-  
-  /* ✅ Extra small screens (optional tweak) */
-  @media (max-width: 480px) {
-    .carousel-btn {
-      font-size: 20px;
-      padding: 6px;
-    }
-  }
-  
-  
+
+/* Hover & Focus Effects */
+.project-card:hover,
+.project-card:focus-within {
+  transform: scale(1.02);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+ 
   .experience-card {
     background: var(--card);
     border: 1px solid var(--border);
