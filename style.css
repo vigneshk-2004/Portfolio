@@ -241,42 +241,23 @@
     font-size: 0.85rem;
     color: #999;
   }
-/* ==== Tabs ==== */
-.project-tabs {
-  text-align: left;
-  margin-bottom: 25px;
+/* ==== Projects Section ==== */
+#projects {
+  padding: 50px 20px;
+  background-color: #f4f8ff;
 }
 
-.tab-btn {
-  padding: 8px 18px;
-  margin: 0 8px;
-  border: none;
-  background-color: #e6f0ff;
-  color: #1e4db7;
-  border-radius: 20px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.tab-btn.active,
-.tab-btn:hover {
-  background-color: #1e4db7;
-  color: white;
-}
-
-/* ==== Category Title ==== */
-.category-title {
+#projects h2 {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #1e4db7;
-  margin-bottom: 15px;
+  margin-bottom: 40px;
 }
 
 /* ==== Carousel Wrapper ==== */
 .carousel-wrapper {
   position: relative;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -290,42 +271,54 @@
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  font-size: 28px;
+  font-size: 32px;
   color: #1e4db7;
   cursor: pointer;
   z-index: 10;
 }
 
 .carousel-btn.left {
-  left: -40px;
+  left: -50px;
 }
 
 .carousel-btn.right {
-  right: -40px;
+  right: -50px;
 }
 
-/* ==== Project Cards ==== */
+/* ==== Projects Carousel ==== */
 .projects-carousel {
-  display: flex;
-  overflow: hidden;
-  min-height: 200px;
   width: 100%;
+  overflow: hidden;
+  min-height: 240px;
 }
 
 .project-card {
   display: none;
-  width: 100%;
-  padding: 25px;
   background: #fafafa;
-  border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: left;
 }
 
 .project-card.active {
   display: block;
 }
+
+.project-card h3 {
+  color: #1e4db7;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* ==== Dots Indicator ==== */
 .dots {
   text-align: center;
   margin-top: 15px;
@@ -335,24 +328,35 @@
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 0 6px;
+  margin: 0 5px;
   border-radius: 50%;
   background-color: #ccc;
   transition: background-color 0.3s;
 }
 
 .dot.active {
-  background-color: rgb(22, 22, 224); /* blue color like your image */
+  background-color: #1e4db7;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .carousel-btn.left { left: -25px; }
+  .carousel-btn.right { right: -25px; }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+  }
 }
 
 
-/* Hover & Focus Effects */
-.project-card:hover,
-.project-card:focus-within {
-  transform: scale(1.02);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
-}
- 
   .experience-card {
     background: var(--card);
     border: 1px solid var(--border);

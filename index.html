@@ -163,75 +163,38 @@ I enjoy learning by doing taking on projects that challenge me to connect differ
     
 
     
-    <!-- Projects -->
-<section id="projects" class="section fade-in">
+   <section id="projects" class="section fade-in">
   <div class="container">
     <h2 style="text-align: center;">Projects</h2>
 
-    <!-- Category Tabs -->
-    <div class="project-tabs">
-      <button class="tab-btn active" onclick="showCategory('java')">Java</button>
-      <button class="tab-btn" onclick="showCategory('aws')">AWS</button>
-      <button class="tab-btn" onclick="showCategory('ml')">ML</button>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left" onclick="prevProject()">&#10094;</button>
+      
+      <div class="projects-carousel" id="projects-carousel">
+        <div class="project-card active">
+          <h3>Real-Time IoT Data Monitoring System Using AWS IoT Core, WebSocket, and EC2</h3>
+          <p>Started with registering a "Thing" and generated the required certificates and policies. Then, I connected my local MQTT client using Python's paho-mqtt to publish and subscribe to AWS IoT Core topics. After that, I built a WebSocket server in Python that listens to MQTT messages and sends real-time data to connected web clients. I created a simple HTML and JavaScript web interface to display the data live and hosted it publicly using AWS S3 static website hosting. Finally, I deployed the WebSocket server on an AWS EC2 instance, secured everything using IAM roles and security policies, and monitored the system using AWS CloudWatch.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Attendance management system</h3>
+          <p>Constructed a scalable Attendance Management System with a user-friendly frontend and a reliable backend. The backend was hosted on AWS EC2 instances, while static files and resources were stored using Amazon S3 to ensure fast and secure access. To handle varying traffic loads, I implemented auto-scaling, allowing the system to automatically increase server capacity during peak hours and scale down during off-peak times. This approach ensured high availability, optimal performance, and cost-efficient resource utilization throughout the application lifecycle.</p>
+        </div>
+
+        <div class="project-card">
+          <h3>Movie Recommendation System</h3>
+          <p>Launched a Content-Based Movie Recommender System using Python by analyzing movie metadata such as titles, genres, and overviews. To identify similar movies, I implemented cosine similarity, which compares the textual content of films. The recommendations are displayed through a user-friendly Streamlit web interface, allowing users to interact with the system seamlessly. I deployed the application on Heroku to make it accessible online in real time. This project delivers personalized movie suggestions based on content analysis, enhancing the user viewing experience.</p>
+        </div>
+      </div>
+
+      <button class="carousel-btn right" onclick="nextProject()">&#10095;</button>
     </div>
 
-    <!-- Java Projects -->
-    <div class="project-category" id="java-category">
-      <div class="carousel-wrapper">
-        <button class="carousel-btn left" onclick="prevSlide('java')">&#10094;</button>
-        <div class="projects-carousel" id="java-carousel">
-          
-          <div class="project-card active">
-            <h3>Smart Email Assistant using Spring Boot & Spring AI</h3>
-            <p>Implemented Smart Email Assistant using Spring Boot and Spring AI. It is designed to automatically summarize long emails, categorize them with relevant tags such as “Urgent” or “Follow-up,” and generate draft replies based on the email content. The application uses REST API endpoints like /summarize, /categorize, and /draft-reply to handle each specific task. Spring AI makes it easy to connect large language models (like ChatGPT) with Java applications for natural language processing. This project helps improve productivity by reducing manual effort and making email handling faster and smarter.</p>
-          </div>
-          <div class="project-card">
-            <h3>Full-Stack Ecommerce App with Spring Boot and React</h3>
-            <p>Built a full-stack Ecommerce Storefront application using Spring Boot for the backend and React with Bootstrap for the frontend. The project features essential functionalities such as product listing, cart operations, and checkout, with smooth navigation using React Router and API integration through Axios. I implemented Spring Data JPA with a MySQL database to manage product and order data. This project showcases my ability to develop a responsive UI, connect RESTful APIs, and handle dynamic data effectively. It’s a strong example of modern, scalable web application development.</p>
-          </div>
-        </div>
-        <button class="carousel-btn right" onclick="nextSlide('java')">&#10095;</button>
-      </div>
-      <div class="dots" id="java-dots"></div>
-    </div>
-
-    <!-- AWS Projects -->
-    <div class="project-category" id="aws-category" style="display: none;">
-      <div class="carousel-wrapper">
-        <button class="carousel-btn left" onclick="prevSlide('aws')">&#10094;</button>
-        <div class="projects-carousel" id="aws-carousel">
-          
-          <div class="project-card active">
-            <h3>Real-Time IoT Data Monitoring System Using AWS IoT Core, WebSocket, and EC2</h3>
-            <p>Started with registering a "Thing" and generated the required certificates and policies. Then, I connected my local MQTT client using Python's paho-mqtt to publish and subscribe to AWS IoT Core topics. After that, I built a WebSocket server in Python that listens to MQTT messages and sends real-time data to connected web clients. I created a simple HTML and JavaScript web interface to display the data live and hosted it publicly using AWS S3 static website hosting. Finally, I deployed the WebSocket server on an AWS EC2 instance, secured everything using IAM roles and security policies, and monitored the system using AWS CloudWatch.</p>
-          </div>
-          <div class="project-card">
-            <h3>Attendance management system</h3>
-            <p>Constructed a scalable Attendance Management System with a user-friendly frontend and a reliable backend. The backend was hosted on AWS EC2 instances, while static files and resources were stored using Amazon S3 to ensure fast and secure access. To handle varying traffic loads, I implemented auto-scaling, allowing the system to automatically increase server capacity during peak hours and scale down during off-peak times. This approach ensured high availability, optimal performance, and cost-efficient resource utilization throughout the application lifecycle.</p>
-          </div>
-        </div>
-        <button class="carousel-btn right" onclick="nextSlide('aws')">&#10095;</button>
-      </div>
-      <div class="dots" id="aws-dots"></div>
-    </div>
-
-    <!-- Machine Learning Projects -->
-    <div class="project-category" id="ml-category" style="display: none;">
-      <div class="carousel-wrapper">
-        <button class="carousel-btn left" onclick="prevSlide('ml')">&#10094;</button>
-        <div class="projects-carousel" id="ml-carousel">
-          <div class="project-card active">
-            <h3>Movie Recommendation System</h3>
-            <p>Launched a Content-Based Movie Recommender System using Python by analyzing movie metadata such as titles, genres, and overviews. To identify similar movies, I implemented cosine similarity, which compares the textual content of films. The recommendations are displayed through a user-friendly Streamlit web interface, allowing users to interact with the system seamlessly. I deployed the application on Heroku to make it accessible online in real time. This project delivers personalized movie suggestions based on content analysis, enhancing the user viewing experience.</p>
-          </div>
-        </div>
-        <button class="carousel-btn right" onclick="nextSlide('ml')">&#10095;</button>
-      </div>
-      <div class="dots" id="ml-dots"></div>
-    </div>
+    <div class="dots" id="carousel-dots"></div>
   </div>
 </section>
-    
+
+
 
     <!-- Experience -->
     <section id="experience" class="section fade-in">
