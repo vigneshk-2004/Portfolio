@@ -242,17 +242,28 @@
     color: #999;
   }
 /* ==== Projects Section ==== */
-#projects {
-  padding: 50px 20px;
-  background-color: #f4f8ff;
-}
+
 
 #projects h2 {
   text-align: center;
   font-size: 2rem;
-  color: #1e4db7;
+  color: #e7e9ee;
   margin-bottom: 40px;
 }
+/* Set background to white */
+#projects {
+  background-color: #ffffff !important;
+  padding: 60px 20px;
+}
+
+/* Make sure the heading text stays blue */
+#projects h2 {
+  color: #1a3dbd;  /* or your preferred blue */
+  font-weight: bold;
+  text-align: center;
+}
+
+
 
 /* ==== Carousel Wrapper ==== */
 .carousel-wrapper {
@@ -307,7 +318,7 @@
 }
 
 .project-card h3 {
-  color: #1e4db7;
+  color: black;
   font-size: 1.3rem;
   margin-bottom: 10px;
 }

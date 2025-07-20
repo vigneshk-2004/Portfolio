@@ -10,6 +10,29 @@ function fadeInOnScroll() {
 }
 window.addEventListener('scroll', fadeInOnScroll);
 window.addEventListener('DOMContentLoaded', fadeInOnScroll);
+document.querySelectorAll(".accordion-toggle").forEach(button => {
+    button.addEventListener("click", () => {
+      const content = button.nextElementSibling;
+      const arrow = button.querySelector(".arrow");
+      const isActive = button.classList.contains("active");
+
+      // Close all open accordions
+      document.querySelectorAll(".accordion-toggle").forEach(btn => {
+        btn.classList.remove("active");
+        btn.nextElementSibling.style.display = "none";
+        btn.querySelector(".arrow").innerHTML = "&#709;";
+        btn.setAttribute("aria-expanded", "false");
+      });
+
+      // If this was not already active, open it
+      if (!isActive) {
+        button.classList.add("active");
+        content.style.display = "block";
+        arrow.innerHTML = "&#708;";
+        button.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
 
 // === Single Project Carousel ===
 let currentProject = 0;
