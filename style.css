@@ -258,7 +258,7 @@
 
 /* Make sure the heading text stays blue */
 #projects h2 {
-  color: #1a3dbd;  /* or your preferred blue */
+  color: rgb(22, 22, 224);  /* or your preferred blue */
   font-weight: bold;
   text-align: center;
 }
